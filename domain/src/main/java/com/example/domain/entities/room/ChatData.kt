@@ -1,4 +1,4 @@
-package com.example.docsappassignment.data.database
+package com.example.architecture.data.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

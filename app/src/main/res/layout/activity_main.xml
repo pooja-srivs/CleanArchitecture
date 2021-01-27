@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat.ChatActivity">
+
+   <ImageView
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:src="@drawable/chatbck"
+       android:scaleType="fitXY"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"/>
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:alpha="0.6"
+       android:background="@color/black"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/list_messages"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       tools:listitem="@layout/item_messages"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/ll_msg"/>
+
+   <LinearLayout
+       android:id="@+id/ll_msg"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:background="@drawable/curved_yellow_edge"
+       android:padding="@dimen/dimen_5"
+       android:textColorHint="@color/yellow"
+       android:layout_margin="@dimen/margin_15"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@id/cv_send">
+
+      <com.vanniktech.emoji.EmojiEditText
+          android:id="@+id/et_message"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/dimen_10"
+          android:background="@color/transparent"
+          android:cursorVisible="true"
+          android:hint="@string/write_your_message"
+          android:padding="@dimen/dimen_10"
+          android:textColor="@color/white"
+          android:textColorHint="@color/white"
+          android:textCursorDrawable="@drawable/curser_color"
+          android:textSize="@dimen/dimen_15" />
+
+   </LinearLayout>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cv_send"
+       android:layout_width="35dp"
+       android:layout_height="35dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:background="@color/transparent"
+       android:layout_margin="@dimen/dimen_15"
+       app:cardBackgroundColor="@color/transparent">
+   <ImageView
+       android:id="@+id/iv_send"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/send"
+       android:tintMode="@color/gray"/>
+   </androidx.cardview.widget.CardView>
+
+   <ProgressBar
+       android:id="@+id/progress"
+       android:layout_width="35dp"
+       android:layout_height="35dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:visibility="gone"
+       android:layout_margin="@dimen/dimen_15" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
