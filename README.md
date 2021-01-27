@@ -15,7 +15,7 @@ API
 Details:
 Host URL: http://www.personalityforge.com/api/chat/
 Method : GET GET Parameters:
-apiKey: 6nt5d1nJHkqbkphe chatBotID: 63906 externalID:
+apiKey: *** chatBotID: 63906 externalID:
 <yourname> message: <whatever user types in the edit box when
 pressing send>
 
