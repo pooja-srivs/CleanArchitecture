@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CleanArchitecture</string>
+    <string name="map_api">enter_your_own_key</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="hello_world">Hello Square World!</string>
+    <string name="write_your_message">Write your message here...</string>
+
+</resources>
+
+
+
